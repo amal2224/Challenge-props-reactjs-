@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+body {
+    font-family: "Rasa", serif;
+    font-weight: 300;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+    background: none;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.text-important {
+    color: #a7bea9;
+    font-size: 45px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Header */
+
+header {
+    z-index: 1;
+    display: flex;
+    position: sticky;
+    top: 0;
+    background: white;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/*header > ul */
+.navmenu {
+    list-style: none;
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+}
+
+.navmenu a:hover {
+    color: #a7bea9;
+    text-decoration: underline;
+}
+
+/* section 1   */
+#about-me {
+    display: flex;
+    padding: 35px;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.168);
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+/*Projects  */
+#projects {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.168);
+}
+
+.text-important {
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    cursor: pointer;
+    width: 300px;
+    /* margin : top/bottom  left/right  */
+    margin: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.171);
+}
+
+.project-card h3 {
+    padding-left: 10px;
+    margin-bottom: 0;
+}
+
+.project-card a {
+    color: rgb(61, 170, 221);
+    text-decoration: underline;
+}
+
+.project-card p {
+    padding: 10px;
+    margin: 0;
+}
+
+.project-card img {
+    width: 100%;
+}
+
+/*Contact me  */
+#contact {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+}
+
+#contact h2 {
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 50%;
+}
+
+#contact form>button {
+    align-self: center;
+    margin-top: 15px;
+}
+
+#contact form>button:hover {
+    color: white;
+    background-color: black;
+}
+
+/*Footer*/
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 15px;
 }

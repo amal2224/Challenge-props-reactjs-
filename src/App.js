@@ -1,23 +1,54 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './components/Navbar'
+import About from './components/About'
+import ListProject from './components/ListProject'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 function App() {
+  const person = 
+            {
+              fullName : " John doe",
+              img : '/assets/John-Doe.JPG'
+            };
+  const project = [
+                  {
+                    img : "/assets/proj.png",
+                    title : "PROJECT 1",
+                    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ex natus quis beatae perspiciatis repellat laudantium aliquam.",
+                    gitLink : "Github Link"
+                  },
+                  {
+                    img : "/assets/proj.png",
+                    title : "PROJECT 2",
+                    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus ex natus quis beatae perspiciatis repellat laudantium aliquam.",
+                    gitLink : "Github Link"
+                  },
+                  {
+                    img : "/assets/proj.png",
+                    title : "PROJECT 3",
+                    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus ex natus quis beatae perspiciatis repellat laudantium aliquam.",
+                    gitLink : "Github Link"
+                  },
+                  {
+                    img : "/assets/proj.png",
+                    title : "PROJECT 4",
+                    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus ex natus quis beatae perspiciatis repellat laudantium aliquam.",
+                    gitLink : "Github Link"
+                  }
+                  ];
+  const footerr = {
+                    Copyritghts : "Copyritghts",
+                    company : "GOMYCODE",
+                    year : "2020"
+                  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar person={person}/>
+      <About person={person}/>
+      <ListProject project={project}/>
+      <Contact person={person}/>
+      <Footer footerr={footerr}/>
     </div>
   );
 }
